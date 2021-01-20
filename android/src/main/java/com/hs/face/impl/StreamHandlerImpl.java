@@ -34,7 +34,7 @@ public class StreamHandlerImpl implements EventChannel.StreamHandler {
      * event发送数据
      * @param data
      */
-    public void eventSinkSuccess(Object data) {
+    public void eventSinkSuccess(String data) {
         if (eventSink != null) {
             eventSink.success(data);
         } else {

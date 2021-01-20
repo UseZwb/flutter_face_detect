@@ -58,8 +58,7 @@ class FaceDetectCameraController {
   /// 人脸数据流监听
   void faceDetectStreamListen(dynamic success, {dynamic error}) {
     _eventChannel.receiveBroadcastStream().listen((data) {
-      List dataList = convert.jsonDecode(data);
-      success(List<FaceDetectInfoModel>.from(dataList.map((x) => FaceDetectInfoModel.fromJson(x))));
+      success(data);
     }, onError: error);
   }
 
